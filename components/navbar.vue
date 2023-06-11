@@ -1,11 +1,11 @@
 <template>
     <div class="navbar">
         <div class="top">
-            <Nuxt-link class="logo" to="/home">
+            <Nuxt-link class="logo" to="/">
                 ТКАНИ
             </Nuxt-link>
             <div class="search">
-                <img class="search__image" src="@/assets/Flag.svg" alt="">
+                <img class="search__image" src="@/assets/flag.svg" alt="">
                 <div class="search__text">Санкт-Петербург</div>
                 <input class="search__area" placeholder="Я ищу">
             </div>
@@ -16,14 +16,14 @@
             <div class="user__busket">
                 <div class="user__favorite">
                     <Nuxt-link class="favorite__button" to="/favorite">
-                        <img src="@/assets/Favorite.svg" alt="" class="favorite">
+                        <img src="@/assets/favorite.svg" alt="" class="favorite">
                     </Nuxt-link>
                     <Nuxt-link class="user__button" to="/user">
-                        <img src="@/assets/User.svg" alt="" class="user">
+                        <img src="@/assets/user.svg" alt="" class="user">
                     </Nuxt-link>
                 </div>
                 <Nuxt-link class="busket__button" to="/busket">
-                    <img src="@/assets/Busket.svg" alt="">
+                    <img src="@/assets/busket.svg" alt="">
                     <div class="busket__count">12</div>
                 </Nuxt-link>
             </div>
@@ -43,7 +43,6 @@
 .navbar {
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 184px;
     font-family: 'Montserrat';
     gap: 17px;
@@ -53,8 +52,8 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 37px
+    padding-top: 37px;
+    margin-left: 375px
 }
 .logo {
     position: relative;
@@ -181,6 +180,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
+    margin-left: 375px
 }
 .for__cloth {
     color: rgba(191, 30, 119, 1);
