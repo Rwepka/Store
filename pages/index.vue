@@ -2,61 +2,30 @@
     <title>Home</title>
     <navbar></navbar>
     <div class="slide__box">
-        <img src="@/assets/slide.png" alt="" class="slide">
+        <img src="/assets/slide.png" alt="" class="slide">
     </div>
-    <div class="specials">
-        <div class="first">
-            <img src="@/assets/sale1.png" alt="">
-        </div>
-        <div class="second">
-            <img src="@/assets/sale2.png" alt="">
-        </div>
-        <div class="third">
-            <img src="@/assets/sale3.png" alt="">
-        </div>
-    </div>
-    <div class="categories">
-        <div class="categories__name">
-            <div class="popular">ПОПУЛЯРНЫЕ КАТЕГОРИИ</div>
-        </div>
-        <div class="first__line">
-            <img src="@/assets/linen.png" alt="">
-            <img src="@/assets/cotton.png" alt="">
-        </div>
-        <div class="second__line">
-            <img src="@/assets/viscose.png" alt="">
-            <img src="@/assets/christmas__fabrics.png" alt="">
-        </div>
-        <div class="third__line">
-            <img src="@/assets/linen2.png" alt="">
-            <img src="@/assets/cotton2.png" alt="">
-            <img src="@/assets/viscose2.png" alt="">
-        </div>
-    </div>
+    <specials/>
+    <categories/>
     <div class="products">
         <div class="products__name">
             <div class="before">ВЫ ПРОСМАТРИВАЛИ</div>
         </div>
         <div class="product__list">
-            <div class="item__1"></div>
-            <div class="item__2"></div>
-            <div class="item__3"></div>
+            <storeOfCards 
+                v-for="card of cardStore.cards"
+                :key="card.id"
+                :card="card"/>
         </div>
     </div>
+    <banner/>
 </template>
 <style>
-.slide {
-    width: 100%;
-}
-.slide__box {
-    margin-right: 150px;
-}
 .specials {
     display: flex;
     gap: 70px;
     align-items: center;
-    justify-content: center;
     margin-top: 100px;
+    margin-left: 375px;
 }
 .first, .second, .third {
     width: 370px;
@@ -118,7 +87,19 @@
     text-align: center;
     margin-top: 80px
 }
+.product__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 41px
+}
 </style>
 <script setup>
-import navbar from '@/components/navbar.vue'
+    import navbar from '/components/navbar.vue'
+    import { useCardStore } from '/stores/product__cards.js'
+    import storeOfCards from '/components/storeofcards.vue'
+    import categories from '/components/categories.vue'
+    import banner from '/components/banner.vue'
+    import specials from '/components/specials.vue'
+    const cardStore = useCardStore()
 </script>
