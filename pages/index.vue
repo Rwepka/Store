@@ -1,25 +1,29 @@
 <template>
     <title>Home</title>
-    <navbar></navbar>
+    <Navbar/>
     <div class="slide__box">
         <img src="/assets/slide.png" alt="" class="slide">
     </div>
-    <specials/>
-    <categories/>
+    <Specials/>
+    <Categories/>
     <div class="products">
         <div class="products__name">
             <div class="before">ВЫ ПРОСМАТРИВАЛИ</div>
         </div>
         <div class="product__list">
-            <storeOfCards 
+            <StoreOfCards 
                 v-for="card of cardStore.cards"
                 :key="card.id"
                 :card="card"/>
         </div>
     </div>
-    <banner/>
+    <Footer></Footer>
 </template>
 <style>
+body {
+    margin: 0;
+    font-family: 'Montserrat';
+}
 .specials {
     display: flex;
     gap: 70px;
@@ -49,7 +53,6 @@
     background-position-y: 30px;
 }
 .popular {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
@@ -78,7 +81,6 @@
 }
 .before {
     height: 72px;
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 48px;
@@ -95,11 +97,11 @@
 }
 </style>
 <script setup>
-    import navbar from '/components/navbar.vue'
-    import { useCardStore } from '/stores/product__cards.js'
-    import storeOfCards from '/components/storeofcards.vue'
-    import categories from '/components/categories.vue'
-    import banner from '/components/banner.vue'
-    import specials from '/components/specials.vue'
+    import Navbar from '/components/Navbar.vue'
+    import { useCardStore } from '/stores/ProductCards.js'
+    import StoreOfCards from '/components/StoreOfCards.vue'
+    import Categories from '/components/Categories.vue'
+    import Footer from '/components/Footer.vue'
+    import Specials from '/components/Specials.vue'
     const cardStore = useCardStore()
 </script>

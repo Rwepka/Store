@@ -12,7 +12,8 @@ export const useCardStore = defineStore ('cardStore', {
                     density: '170 гр/м2',
                     price: 240,
                     totalPrice: 360,
-                    image: "/assets/matting1.png"
+                    image: "/assets/matting1.png",
+                    favorite: false
                 },
                 {
                     id: 2,
@@ -23,7 +24,8 @@ export const useCardStore = defineStore ('cardStore', {
                     density: '170 гр/м2',
                     price: 240,
                     totalPrice: 360,
-                    image: "/assets/matting2.png"
+                    image: "/assets/matting2.png",
+                    favorite: true
                 },
                 {
                     id: 3,
@@ -34,7 +36,8 @@ export const useCardStore = defineStore ('cardStore', {
                     density: '170 гр/м2',
                     price: 240,
                     totalPrice: 360,
-                    image: "/assets/matting3.png"
+                    image: "/assets/matting3.png",
+                    favorite: false
                 },
             ]
         }

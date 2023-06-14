@@ -1,6 +1,10 @@
 <template>
     <div class="card__before">
       <img :src="card.image">
+      <div @click="card.favorite = !card.favorite" class="heart">
+        <img v-if="card.favorite == true" src="/assets/heart1.svg">
+        <img v-else src="/assets/heart.svg">
+      </div>
       <div class="facture">
         {{ card.facture }}
       </div>
@@ -33,7 +37,6 @@ const props = defineProps ({
 
 <style lang="scss">
 .facture {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -42,7 +45,6 @@ const props = defineProps ({
   opacity: 0.7;
 }
 .name {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -54,7 +56,6 @@ const props = defineProps ({
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -83,7 +84,6 @@ const props = defineProps ({
   align-items: center;
 }
 .price {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -91,7 +91,6 @@ const props = defineProps ({
   color: #545155;
 }
 .total__price {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -101,12 +100,17 @@ const props = defineProps ({
   opacity: 0.3;
 }
 .to__busket {
-  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   color: #BF1E77;
   cursor: pointer;
+}
+.heart {
+  position: relative;
+  left: 317px;
+  top: -341px;
+  width: 24px;
 }
 </style>

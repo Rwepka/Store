@@ -44,7 +44,6 @@
     display: flex;
     flex-direction: column;
     height: 184px;
-    font-family: 'Montserrat';
     gap: 17px;
     box-shadow: 0px 11px 35px rgba(86, 52, 71, 0.1);
 }
