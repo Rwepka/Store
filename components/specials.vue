@@ -26,6 +26,16 @@
 <script>
 </script>
 <style lang="scss">
+.specials {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 375px;
+}
+.first, .second, .third {
+    width: 370px;
+}
 .specials__line {
     display: flex;
     position: relative;

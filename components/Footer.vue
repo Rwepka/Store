@@ -37,7 +37,6 @@
     </div>
     <img class="map" src="/assets/Map.png" alt="">
 </div>
-    
 </template>
 
 <script>

@@ -1,8 +1,9 @@
 <template>
-  <navbar/>
-  <nuxt/>
+  <Navbar />
+  <NuxtPage />
+  <Footer />
 </template>
 <script setup>
-import navbar from 'components/Navbar.vue'
+import Navbar from '/components/Navbar.vue'
+import Footer from '/components/Footer.vue'
 </script>
-<!-- Я немного не понял, он вроде должен сам подключаться, но на странице его нет -->

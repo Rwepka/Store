@@ -1,107 +1,19 @@
 <template>
     <title>Home</title>
-    <Navbar/>
-    <div class="slide__box">
-        <img src="/assets/slide.png" alt="" class="slide">
-    </div>
+    <SlideBox/>
     <Specials/>
     <Categories/>
-    <div class="products">
-        <div class="products__name">
-            <div class="before">ВЫ ПРОСМАТРИВАЛИ</div>
-        </div>
-        <div class="product__list">
-            <StoreOfCards 
-                v-for="card of cardStore.cards"
-                :key="card.id"
-                :card="card"/>
-        </div>
-    </div>
-    <Footer></Footer>
+    <Products/>
 </template>
 <style>
 body {
     margin: 0;
     font-family: 'Montserrat';
 }
-.specials {
-    display: flex;
-    gap: 70px;
-    align-items: center;
-    margin-top: 100px;
-    margin-left: 375px;
-}
-.first, .second, .third {
-    width: 370px;
-}
-.categories {
-    background: rgba(251, 247, 244, 1);
-    width: 1768px;
-    height: 1000px;
-    margin-left: 150px;
-    margin-top: 100px;
-
-}
-.categories__name {
-    width: 1170px;
-    height: 196px;
-    margin-left: 223px;
-    text-align: center;
-    background-image: url(@/assets/categories.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 30px;
-}
-.popular {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 150%;
-    color: #545155;
-    padding-top: 83px;
-}
-.first__line, .second__line, .third__line {
-    display: flex;
-    height: 300px;
-    margin-left: 223px;
-    gap: 30px
-}
-.second__line, .third__line {
-    margin-top: 30px;
-}
-.products {
-    margin-top: 156px;
-    padding-top: 80px;
-    width: 1920px;
-    height: 941px;
-    background-image: url(/_nuxt/assets/before.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 105px;
-}
-.before {
-    height: 72px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 150%;
-    color: #545155;
-    text-align: center;
-    margin-top: 80px
-}
-.product__list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 41px
-}
 </style>
 <script setup>
-    import Navbar from '/components/Navbar.vue'
-    import { useCardStore } from '/stores/ProductCards.js'
-    import StoreOfCards from '/components/StoreOfCards.vue'
     import Categories from '/components/Categories.vue'
-    import Footer from '/components/Footer.vue'
     import Specials from '/components/Specials.vue'
-    const cardStore = useCardStore()
+    import Products from '/components/Products.vue'
+    import SlideBox from '/components/SlideBox.vue'
 </script>
