@@ -118,7 +118,6 @@
 .info {
     display: flex;
     color: #545155;
-    gap: 145px
 }
 .contacts {
     margin-left: 373px;
@@ -126,9 +125,13 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
+    margin-right: 72px;
+    border-right: solid 1px rgba(191, 30, 119, 0.2);
 }
 .contacts, .pay {
     margin-top: 84px;
+    padding-right: 72px;
+    height: 358px;
 }
 .icons {
     display: flex;

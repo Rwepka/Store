@@ -1,5 +1,5 @@
 <template>
-    <title>Home</title>
+    <title>Ткани</title>
     <SlideBox/>
     <Specials/>
     <Categories/>
