@@ -42,7 +42,7 @@
 <script>
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .banner {
     margin-left: 375px;
 }

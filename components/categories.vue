@@ -43,7 +43,7 @@
 <script>
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .first__line, .second__line, .third__line {
     display: flex;
     height: 300px;

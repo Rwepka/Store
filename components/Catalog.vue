@@ -35,7 +35,7 @@
   <div class="filters">
   </div>
 </template>
-<style>
+<style scoped>
 .catalog {
   margin-top: 60px;
 }

@@ -1,6 +1,6 @@
 <template>
     <div class="card__before">
-      <img :src="card.image">
+      <img :src="card.image" class="card__image">
       <div @click="card.favorite = !card.favorite" class="heart">
         <img v-if="card.favorite == true" src="/assets/heart1.svg">
         <img v-else src="/assets/heart.svg">
@@ -35,7 +35,7 @@ const props = defineProps ({
 })
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .facture {
   font-style: normal;
   font-weight: 400;

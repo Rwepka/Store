@@ -6,7 +6,7 @@
   <div class="value__box"><div class="slider__value">{{ firstSliderValue }}</div><div class="slider__value second">{{ secondSliderValue }}</div></div>
 </div>
 </template>
-<style>
+<style scoped>
 .slider__box {
   width: 242px;
   display: flex;

@@ -1,7 +1,6 @@
 <template>
   <div class="products">
         <div class="products__name">
-            <div class="before">ВЫ ПРОСМАТРИВАЛИ</div>
         </div>
         <div class="product__list">
             <StoreOfCards 
@@ -12,7 +11,7 @@
     </div>
 </template>
 <script setup>
-import StoreOfCards from '/components/StoreOfCards.vue'
+import StoreOfCards from '/components/StoreOfCardsFull.vue'
 import { useCardStore } from '/stores/ProductCards.js'
 const cardStore = useCardStore()
 </script>
@@ -26,16 +25,6 @@ const cardStore = useCardStore()
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: 105px;
-}
-.before {
-    height: 72px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 150%;
-    color: #545155;
-    text-align: center;
-    margin-top: 80px
 }
 .product__list {
     display: flex;
