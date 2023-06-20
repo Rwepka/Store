@@ -46,6 +46,7 @@
     height: 184px;
     gap: 17px;
     box-shadow: 0px 11px 35px rgba(86, 52, 71, 0.1);
+    width: 1920px;
 }
 .top {
     position: relative;

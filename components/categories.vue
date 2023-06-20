@@ -71,7 +71,7 @@
     background: rgba(251, 247, 244, 1);
     width: 1768px;
     height: 1000px;
-    margin-left: 150px;
+    margin-left: 247px;
     margin-top: 100px;
 
 }
