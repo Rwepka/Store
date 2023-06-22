@@ -1,27 +1,21 @@
 <template>
   <title>Каталог</title>
-  <div class="catalog">
-    <div>
+    <div class="catalog__filters">
       <Catalog/>
       <Filters/>
     </div>
     <Products/>
-  </div>
+    <PageList/>
+    
 </template>
 <script setup>
 import Catalog from '/components/Catalog.vue'
 import Filters from '/components/Filters.vue'
-import Products from '/components/ProductsFull'
+import Products from '/components/ProductsFull.vue'
+import PageList from '/components/PageList.vue'
 </script>
 <style scoped>
-.catalog {
-  display: flex;
-  gap: 59px
-}
-.products {
-  background-image: none;
-  width: 870px;
-  margin-top: 91px;
-  padding-top: 0;
+.catalog__filters {
+  position: absolute  ;
 }
 </style>

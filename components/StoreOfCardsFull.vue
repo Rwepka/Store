@@ -36,84 +36,88 @@ const props = defineProps ({
 </script>
 
 <style lang="scss" scoped>
+.card__before {
+  width: 270px;
+}
 .card__image {
   width: 270px;
 }
 .facture {
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 150%;
-color: #BF1E77;
-opacity: 0.7;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #BF1E77;
+  opacity: 0.7;
 }
 .name {
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 150%;
-color: #BF1E77;
-margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  color: #BF1E77;
+  margin-bottom: 20px;
 }
 .properties {
-display: flex;
-flex-direction: column;
-gap: 16px;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 150%;
-color: #545155;
-border-bottom: solid #BF1E77 1px;
-padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #545155;
+  border-bottom: solid #BF1E77 1px;
+  padding-bottom: 24px;
 }
 .propertie__value {
-font-weight: 400;
+  font-weight: 400;
 }
 .width, .structure, .density {
-display: flex;
-flex-direction: row;
-gap: 10px
+  display: flex;
+  flex-direction: row;
+  gap: 10px
 }
 .price__busket {
-margin-top: 24px;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .price__block {
-display: flex;
-gap: 20px;
-align-items: center;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 .price {
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 150%;
-color: #545155;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 150%;
+  color: #545155;
 }
 .total__price {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-text-align: right;
-color: #545155;
-opacity: 0.3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: right;
+  color: #545155;
+  opacity: 0.3;
 }
 .to__busket {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-color: #BF1E77;
-cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #BF1E77;
+  cursor: pointer;
 }
 .heart {
-position: relative;
-left: 317px;
-top: -341px;
-width: 24px;
+  position: relative;
+  left: 215px;
+  top: -245px;
+  width: 24px;
+  cursor: pointer;
 }
 </style>

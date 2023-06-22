@@ -2,28 +2,38 @@
   <div class="filters">
     <div class="filters__head">Фильтры</div>
     <div class="filters__price">Цена за метр
-    <PriceSlider/>
+      <PriceSlider/>
     </div>
     <div class="filters__width">Ширина
-    <!-- <WidthSlider/> -->
+      <WidthSlider/>
     </div>
-    <div class="filters__density">Плотность</div>
-    <div class="filters__type">Тип ткани</div>
-    <div class="filters__drawning">Рисунок</div>
-    <div class="filters__specification">Назначение</div>
-    <div class="filters__color">Цвет</div>
-    <div class="filters__specials">Особенности</div>
-    <div class="filters__compound">Состав</div>
-    <div class="filters__manufacter">Страна производитель</div>
+    <div class="filters__density">Плотность
+      <DensitySlider/>
+    </div>
+    <div class="filters__type"><div class="type__text">Тип ткани<img class="filter__arrow" src="/assets/arrow__bot.svg" alt="" @click="filterClick()"></div>
+      <FabricType/>
+    </div>
+    <div class="filters__drawning">Рисунок<img src="/assets/arrow__bot.svg" alt=""></div>
+    <div class="filters__specification">Назначение<img src="/assets/arrow__bot.svg" alt=""></div>
+    <div class="filters__color">Цвет<img src="/assets/arrow__bot.svg" alt=""></div>
+    <div class="filters__specials">Особенности<img src="/assets/arrow__bot.svg" alt=""></div>
+    <div class="filters__compound">Состав<img src="/assets/arrow__bot.svg" alt=""></div>
+    <div class="filters__manufacter">Страна производитель<img src="/assets/arrow__bot.svg" alt=""></div>
     <div class="accept">Применить</div>
     <div class="reset">Сбросить</div>
   </div>
 </template>
 <style src="@vueform/slider/themes/default.css"></style>
 <style lang="scss" scoped>
+$padding: 20px 0px;
+$border: solid 1px rgba(191, 30, 119, 0.1);
+$width: 240px;
+$color: #545155;
+$dcolor: #BF1E77;
 .filters {
   margin-left: 375px;
-  width: 240px;
+  width: $width;
+  color: $color
 }
 .filters__head {
   font-style: normal;
@@ -31,23 +41,46 @@
   font-size: 24px;
   line-height: 150%;
   color: #000000;
-  border-bottom: solid 1px rgba(191, 30, 119, 0.1);
-  padding: 20px 0px;
-  width: 240px;
+  border-bottom: $border;
+  padding: $padding;
+  width: $width;
 }
-.filters__price {
+.filters__price, .filters__width, .filters__density,
+.filters__drawning, .filters__specification, .filters__color, 
+.filters__specials, .filters__compound, .filters__manufacter {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
-  color: #545155;
-  border-bottom: solid 1px rgba(191, 30, 119, 0.1);
-  padding: 20px 0px;
-  width: 240px;
+  border-bottom: $border;
+  padding: $padding;
+  width: $width;
+}
+.filters__drawning, .filters__specification, .filters__color, 
+.filters__specials, .filters__compound, .filters__manufacter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filters__type {
+  padding: $padding;
+  border-bottom: $border;
+}
+.type__text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.filter__arrow {
+  cursor: pointer;
+}
+.filter__arrow.closed {
+  transform: rotate(180deg);
 }
 .accept, .reset {
   padding: 12px 71.5px 14px 71.5px;
-  background: #BF1E77;
+  background: $dcolor;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -59,10 +92,35 @@
 }
 .reset {
   background: #FBF7F4;
-  color: #BF1E77;
+  color: $dcolor;
 }
 </style>
-<script setup>
+<script lang="ts" setup>
 import PriceSlider from '/components/PriceSlider.vue'
-// import WidthSlider from '/components/WidthSlider.vue'
+import WidthSlider from '/components/WidthSlider.vue'
+import DensitySlider from '/components/DensitySlider.vue';
+import FabricType from './FabricType.vue';
+</script>
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  data() {
+    return {
+
+    }
+  },
+  methods: {
+    filterClick(){
+      const arrow = document.querySelector('.filter__arrow')
+      const list = document.querySelector('.fabric')
+      if (arrow != null) {
+        arrow.classList.toggle('closed')
+      }
+      if (list != null) {
+        list.classList.toggle('closed')
+      }
+    }
+  }
+})
 </script>

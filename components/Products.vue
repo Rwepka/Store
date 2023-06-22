@@ -3,7 +3,7 @@
         <div class="products__name">
             <div class="before">ВЫ ПРОСМАТРИВАЛИ</div>
         </div>
-        <div class="product__list">
+        <div class="products__list">
             <StoreOfCards 
                 v-for="card of cardStore.cards"
                 :key="card.id"
@@ -37,7 +37,7 @@ const cardStore = useCardStore()
     text-align: center;
     margin-top: 80px
 }
-.product__list {
+.products__list {
     display: flex;
     justify-content: center;
     gap: 30px;

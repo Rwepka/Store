@@ -1,10 +1,10 @@
 <template>
-  <div class="products">
-        <div class="products__name">
+  <div class="products-full">
+        <div class="products-full__name">
         </div>
-        <div class="product__list">
+        <div class="products-full__list">
             <StoreOfCards 
-                v-for="card of cardStore.cards"
+                v-for="card of cardStoreFull.cards"
                 :key="card.id"
                 :card="card"/>
         </div>
@@ -12,24 +12,22 @@
 </template>
 <script setup>
 import StoreOfCards from '/components/StoreOfCardsFull.vue'
-import { useCardStore } from '/stores/ProductCards.js'
-const cardStore = useCardStore()
+import { useCardStore } from '/stores/ProductCardsFull.js'
+const cardStoreFull = useCardStore()
 </script>
 <style lang="scss" scoped>
-.products {
-    margin-top: 156px;
-    padding-top: 80px;
-    width: 1920px;
-    height: 941px;
-    background-image: url(/_nuxt/assets/before.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 105px;
+.products-full {
+  background-image: none;
+  width: 870px;
+  margin-top: 132px;
+  padding-top: 0;
+  margin-left: 675px;
 }
-.product__list {
-    display: flex;
+.products-full__list {
+    display: grid;
     justify-content: center;
     gap: 30px;
-    margin-top: 41px
+    margin-top: 41px;
+    grid-template-columns: 270px 270px 270px;
 }
 </style>

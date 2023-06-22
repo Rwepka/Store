@@ -1,9 +1,9 @@
 <template>
   <div class="slider__container">
-    <div class="fill-width"></div><div class="slider__back"><div class="fill-width right"></div></div>
-    <div class="slider__box"><input @input="minWidthChange()" step="0.05" min="0.95" max="300" class="slider-width" value="0.95" type="range"></div>
-    <div class="slider__box"><input @input="maxWidthChange()" step="0.05" min="0.95" max="300" class="slider-width second" value="250" type="range"></div>
-    <div class="value__box"><div class="slider__value">{{ minWidth }}</div><div class="slider__value second">{{ maxWidth }}</div></div>
+    <div class="fill-density"></div><div class="slider__back"><div class="fill-density right"></div></div>
+    <div class="slider__box"><input @input="minDensityChange()" min="48" max="600" step="0.5" class="slider-density" value="48" type="range"></div>
+    <div class="slider__box"><input @input="maxDensityChange()" min="48" max="600" step="0.5" class="slider-density second" value="400" type="range"></div>
+    <div class="value__box"><div class="slider__value">{{ minDensity }}</div><div class="slider__value second">{{ maxDensity }}</div></div>
   </div>
   </template>
   <style scoped>
@@ -11,17 +11,17 @@
     width: 242px;
     display: flex;
   }
-  .slider-width, .slider-width::-webkit-slider-thumb, .slider-width::-webkit-slider-runnable-track {
+  .slider-density, .slider-density::-webkit-slider-thumb, .slider-density::-webkit-slider-runnable-track {
     appearance: none;
   }
-  .slider-width {
+  .slider-density {
     position: absolute;
     width: 242px;
     background: transparent;
     margin-left: 0px;
     z-index: 2;
   }
-  .slider-width.second {
+  .slider-density.second {
     width: 242px;
   }
   .slider__back {
@@ -35,7 +35,7 @@
     z-index: 0;
     outline: none;
   }
-  .slider-width::-webkit-slider-thumb {
+  .slider-density::-webkit-slider-thumb {
     position: relative;
     height: 14px;
     width: 14px;
@@ -48,7 +48,7 @@
   .slider__container {
     width: 242px;
   }
-  .fill-width {
+  .fill-density {
     position: relative;
     top: 9px;
     height: 4px;
@@ -56,9 +56,9 @@
     width: 10px;
     z-index: 1;
   }
-  .fill-width.right {
+  .fill-density.right {
     top: 0px;
-    width: 45px;
+    width: 85px;
   }
   .value__box {
     display: flex;
@@ -80,24 +80,24 @@
   export default defineComponent({
     data(){
       return {
-        minWidth: 0.95,
-        maxWidth: 250
+        minDensity: 48,
+        maxDensity: 400
       }
     },
     methods: {
-      minWidthChange(){
-        const fill = document.querySelector('.fill-width')
-        const slider = document.querySelector('.slider-width')
+      minDensityChange(){
+        const fill = document.querySelector('.fill-density')
+        const slider = document.querySelector('.slider-density')
         const coef = (slider.max - slider.min)/98
-        this.minWidth = slider.value
+        this.minDensity = slider.value
         fill.style.width = slider.value/coef + "%"
       },
-      maxWidthChange(){
-        const fill = document.querySelector('.fill-width.right')
-        const slider = document.querySelector('.slider-width.second')
+      maxDensityChange(){
+        const fill = document.querySelector('.fill-density.right')
+        const slider = document.querySelector('.slider-density.second')
         const coef = (slider.max - slider.min)/98
-        this.maxWidth = slider.value
-        fill.style.width = 100 - slider.value/coef + "%"
+        this.maxDensity = slider.value
+        fill.style.width = 108 - slider.value/coef + "%"
       }
     },
   })

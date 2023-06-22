@@ -112,5 +112,6 @@ const props = defineProps ({
   left: 317px;
   top: -341px;
   width: 24px;
+  cursor: pointer;
 }
 </style>

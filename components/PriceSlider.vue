@@ -1,8 +1,8 @@
 <template>
 <div class="slider__container">
   <div class="fill"></div><div class="slider__back"><div class="fill right"></div></div>
-  <div class="slider__box"><input @input="onChangeFirst()" min="28" max="1300" class="slider" value="28" type="range"></div>
-  <div class="slider__box"><input @input="onChangeSecond()" min="28" max="1300" class="slider second" value="1300" type="range"></div>
+  <div class="slider__box"><input @input="minPriceChange()" min="28" max="1300" class="slider" value="28" type="range"></div>
+  <div class="slider__box"><input @input="maxPriceChange()" min="28" max="1300" class="slider second" value="1300" type="range"></div>
   <div class="value__box"><div class="slider__value">{{ firstSliderValue }}</div><div class="slider__value second">{{ secondSliderValue }}</div></div>
 </div>
 </template>
@@ -84,14 +84,14 @@ export default defineComponent({
     }
   },
   methods: {
-    onChangeFirst(){
+    minPriceChange(){
       const fill = document.querySelector('.fill')
       const slider = document.querySelector('.slider')
       const coef = (slider.max - slider.min)/98
       this.firstSliderValue = slider.value
       fill.style.width = slider.value/coef + "%"
     },
-    onChangeSecond(){
+    maxPriceChange(){
       const fill = document.querySelector('.fill.right')
       const slider = document.querySelector('.slider.second')
       const coef = (slider.max - slider.min)/98
