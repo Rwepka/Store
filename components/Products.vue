@@ -5,9 +5,9 @@
         </div>
         <div class="products__list">
             <StoreOfCards 
-                v-for="card of cardStore.cards"
-                :key="card.id"
-                :card="card"/>
+            v-for="card of cardStore.cards"
+            :key="card.id"
+            :card="card"/>
         </div>
     </div>
 </template>

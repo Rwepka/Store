@@ -4,7 +4,7 @@
         </div>
         <div class="products-full__list">
             <StoreOfCards 
-                v-for="card of cardStoreFull.cards"
+                v-for="card of cardStore.cards"
                 :key="card.id"
                 :card="card"/>
         </div>
@@ -12,8 +12,8 @@
 </template>
 <script setup>
 import StoreOfCards from '/components/StoreOfCardsFull.vue'
-import { useCardStoreFull } from '/stores/ProductCardsFull.js'
-const cardStoreFull = useCardStoreFull()
+import { useCardStore } from '/stores/ProductCards.js'
+const cardStore = useCardStore()
 </script>
 <style lang="scss" scoped>
 .products-full {

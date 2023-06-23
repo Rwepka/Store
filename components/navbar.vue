@@ -1,4 +1,17 @@
 <template>
+    <div class="true__navbar">
+        <Nuxt-link to="/">Главная</Nuxt-link>
+        <Nuxt-link to="/catalog">Каталог</Nuxt-link>
+        <Nuxt-link to="/product">Подробнее</Nuxt-link>
+        <Nuxt-link to="/contacts">Контакты</Nuxt-link>
+        <Nuxt-link to="/history">История</Nuxt-link>
+        <Nuxt-link to="/favorites">Избранные</Nuxt-link>
+        <Nuxt-link to="/busket">Корзина</Nuxt-link>
+        <Nuxt-link to="/order">Заказ</Nuxt-link>
+        <Nuxt-link to="/personal">Личный кабинет</Nuxt-link>
+        <Nuxt-link to="/payment">Оплата</Nuxt-link>
+        <Nuxt-link to="/delivery">Доставка</Nuxt-link>
+    </div>
     <div class="navbar">
         <div class="top">
             <Nuxt-link class="logo" to="/">
@@ -40,6 +53,10 @@
     </div>
 </template>
 <style lang="scss" scoped>
+.true__navbar {
+    display: flex;
+    justify-content: space-around;
+}
 .navbar {
     display: flex;
     flex-direction: column;

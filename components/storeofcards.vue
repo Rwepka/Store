@@ -1,5 +1,5 @@
 <template>
-    <div class="card__before">
+    <div v-if="card.id < 4" class="card__before">
       <img :src="card.image" class="card__image">
       <div @click="card.favorite = !card.favorite" class="heart">
         <img v-if="card.favorite == true" src="/assets/heart1.svg">
