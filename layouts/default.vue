@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <NuxtPage />
+  <slot />
   <Footer />
 </template>
 <script setup>

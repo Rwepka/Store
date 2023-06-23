@@ -90,7 +90,7 @@
         const slider = document.querySelector('.slider-density')
         const coef = (slider.max - slider.min)/98
         this.minDensity = slider.value
-        fill.style.width = slider.value/coef + "%"
+        fill.style.width = slider.value/coef - 8 + "%"
       },
       maxDensityChange(){
         const fill = document.querySelector('.fill-density.right')

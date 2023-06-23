@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-export const useCardStore = defineStore ('cardStore', {
+export const useCardStoreFull = defineStore ('cardStore', {
     state: () => {
         return {
             cards: [

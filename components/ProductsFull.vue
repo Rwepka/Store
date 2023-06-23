@@ -12,8 +12,8 @@
 </template>
 <script setup>
 import StoreOfCards from '/components/StoreOfCardsFull.vue'
-import { useCardStore } from '/stores/ProductCardsFull.js'
-const cardStoreFull = useCardStore()
+import { useCardStoreFull } from '/stores/ProductCardsFull.js'
+const cardStoreFull = useCardStoreFull()
 </script>
 <style lang="scss" scoped>
 .products-full {
