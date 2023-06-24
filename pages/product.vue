@@ -5,6 +5,8 @@
     <ProductInfo />
   </div>
   <ProductFurniture />
+  <ProductDescription />
+  <ProductRecomends />
 </template>
 
 <script setup>
@@ -14,6 +16,8 @@ definePageMeta({
 import ProductImage from '/components/ProductImage.vue'
 import ProductInfo from '/components/ProductInfo.vue'
 import ProductFurniture from '/components/ProductFurniture.vue';
+import ProductDescription from '/components/ProductDescription.vue';
+import ProductRecomends from '/components/ProductRecomends.vue'
 </script>
 
 <style scoped>
