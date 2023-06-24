@@ -28,10 +28,10 @@
           </div>
           <div class="user__busket">
               <div class="user__favorite">
-                  <Nuxt-link class="favorite__button" to="/favorite">
+                  <Nuxt-link class="favorite__button" to="/favorites">
                       <img src="@/assets/favorite.svg" alt="" class="favorite">
                   </Nuxt-link>
-                  <Nuxt-link class="user__button" to="/user">
+                  <Nuxt-link class="user__button" to="/personal">
                       <img src="@/assets/user.svg" alt="" class="user">
                   </Nuxt-link>
               </div>
