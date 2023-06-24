@@ -21,7 +21,7 @@
         <div class="price">{{ card.price }}₽</div>
         <div class="total__price">{{ card.totalPrice }}₽</div>
       </div>
-      <div class="to__busket">В корзину</div>
+      <div class="to__busket" v-if="card.inBusket < 1" @click="card.inBusket ++">В корзину</div>
     </div>
   </div>
 </template>

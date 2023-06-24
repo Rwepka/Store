@@ -1,5 +1,5 @@
 <template>
-  <div class="product-furniture__head">ПОДБОР ФУРНИТУРЫ</div>
+  <div class="product-furniture__head">С ЭТИМ ТОВАРОМ ПОКУПАЮТ</div>
   <div class="product-furniture__buttons">
     <div class="furniture__button">
       <img src="/assets/thread.svg" alt="">
@@ -41,6 +41,9 @@ const cardStore = useCardStore();
   line-height: 150%;
   margin-top: 80px;
   margin-bottom: 31px;
+  background: url(/assets/rec.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .product-furniture__buttons {
   display: flex;

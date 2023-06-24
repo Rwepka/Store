@@ -13,7 +13,8 @@ export const useCardStore = defineStore ('cardStore', {
                     price: 240,
                     totalPrice: 360,
                     image: "/assets/matting1.png",
-                    favorite: false
+                    favorite: false, 
+                    inBusket: 1
                 },
                 {
                     id: 2,
@@ -25,7 +26,8 @@ export const useCardStore = defineStore ('cardStore', {
                     price: 240,
                     totalPrice: 360,
                     image: "/assets/matting2.png",
-                    favorite: true
+                    favorite: true,
+                    inBusket: 0
                 },
                 {
                     id: 3,
@@ -37,7 +39,8 @@ export const useCardStore = defineStore ('cardStore', {
                     price: 240,
                     totalPrice: 360,
                     image: "/assets/matting3.png",
-                    favorite: false
+                    favorite: false, 
+                    inBusket: 0
                 },
                 {
                   id: 4,
@@ -49,7 +52,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting4.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 5,
@@ -61,7 +65,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting5.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 6,
@@ -73,7 +78,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting6.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 7,
@@ -85,7 +91,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting7.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 8,
@@ -97,7 +104,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting8.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 9,
@@ -109,7 +117,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting9.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 10,
@@ -121,7 +130,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting10.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 11,
@@ -133,7 +143,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting11.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
                 {
                   id: 12,
@@ -145,7 +156,8 @@ export const useCardStore = defineStore ('cardStore', {
                   price: 240,
                   totalPrice: 360,
                   image: "/assets/matting12.png",
-                  favorite: false
+                  favorite: false, 
+                  inBusket: 0
                 },
               
             ]

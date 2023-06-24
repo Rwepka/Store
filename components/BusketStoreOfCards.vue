@@ -1,41 +1,79 @@
 <template>
-    <div v-if="card.id < 4" class="card__before">
-      <img :src="card.image" class="card__image">
-      <div @click="card.favorite = !card.favorite" class="heart">
-        <img v-if="card.favorite == true" src="/assets/heart1.svg">
-        <img v-else src="/assets/heart.svg">
-      </div>
+  <div v-if="card.inBusket > 0" class="card__before">
+    <img :src="card.image" class="card__image">
+    <div>
       <div class="facture">
         {{ card.facture }}
       </div>
       <div class="name">
         {{ card.name }}
       </div>
-      <div class="properties">
-        <div class="width">Ширина <div class="propertie__value">{{ card.width }}</div>м</div>
-        <div class="structure">Состав <div class="propertie__value">{{ card.structure }}</div></div>
-        <div class="density">Плотность <div class="propertie__value">{{ card.density }}</div></div>
-      </div>
       <div class="price__busket">
         <div class="price__block">
           <div class="price">{{ card.price }}₽</div>
           <div class="total__price">{{ card.totalPrice }}₽</div>
         </div>
-        <div class="to__busket" v-if="card.inBusket < 1" @click="card.inBusket ++">В корзину</div>
       </div>
     </div>
+    <div class="product-order__input">
+      <img @click="card.inBusket --" src="/assets/minus.svg" alt="">
+      <div>{{ card.inBusket }}</div>
+      <img @click="card.inBusket ++" src="/assets/plus.svg" alt="">
+    </div>
+    <div class="busket__price">
+      {{ (card.inBusket*card.price).toFixed(0) }} ₽
+    </div>
+    <div>
+      <img class="x" src="/assets/plus.svg" alt="" @click="card.inBusket = 0">
+    </div>
+  </div>
 </template>
 <script setup>
 const props = defineProps ({
-    card: {
-        type: Object,
-        required: true,
-        default: () => {}
-    }
+  card: {
+      type: Object,
+      required: true,
+      default: () => {}
+  }
 })
 </script>
 
 <style lang="scss" scoped>
+.x {
+  position: relative;
+  transform: rotate(45deg);
+  left: 30px;
+  top: 2px;
+}
+.busket__price {
+  font-size: 24px;
+  color: #545155;
+  margin-left: 100px;
+}
+.product-order__input {
+  display: flex;
+  background: #FBF7F4;
+  width: 162px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  font-size: 16px;
+  color: #545155;
+  user-select: none;
+  margin-left: 400px;
+}
+.card__before {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #BF1E7710;
+  align-items: center;
+}
+.card__image {
+  width: 100px;
+  border-radius: 10px;
+}
 .facture {
   font-style: normal;
   font-weight: 400;
@@ -47,7 +85,7 @@ const props = defineProps ({
 .name {
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 150%;
   color: #BF1E77;
   margin-bottom: 20px;
@@ -98,6 +136,7 @@ const props = defineProps ({
   text-align: right;
   color: #545155;
   opacity: 0.3;
+  text-decoration: line-through;
 }
 .to__busket {
   font-style: normal;
@@ -109,8 +148,8 @@ const props = defineProps ({
 }
 .heart {
   position: relative;
-  left: 317px;
-  top: -341px;
+  left: 215px;
+  top: -245px;
   width: 24px;
   cursor: pointer;
 }
