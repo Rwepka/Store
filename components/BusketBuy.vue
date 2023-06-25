@@ -24,11 +24,12 @@
 }
 .buy__button {
   background: #BF1E77;
-  padding: 10px 30px 12px 30px;
+  padding: 12px 30px 10px 30px;
   color: #ffffff;
   height: 28px;
   line-height: 150%;
   border-radius: 4px;
   margin-left: 597px;
+  cursor: pointer;
 }
 </style>

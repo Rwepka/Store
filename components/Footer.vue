@@ -86,6 +86,7 @@
     border-radius: 4px;
     padding-left: 30px;
     border: none;
+    outline: 0;
 }
 .mail::placeholder {
     color: rgba(191, 30, 119, 1);
