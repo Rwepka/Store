@@ -84,7 +84,7 @@ definePageMeta({
   gap: 30px;
   color: #545155;
   line-height: 150%;
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   margin-top: 60px;
 }
 .payment__head {

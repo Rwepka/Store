@@ -41,6 +41,7 @@ const cardStore = useCardStore()
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 41px
+    margin-top: 41px;
+    margin-left: 0;
 }
 </style>
