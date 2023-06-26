@@ -32,7 +32,7 @@
         <div class="buy__button order">Продолжить покупку</div>
       </div>
     </div>
-    <div>
+    <div class="order__right">
       <div class="order__total">
         <div>
           <div class="total__head">Сумма заказа</div>
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .order__body {
   display: flex;
   margin-left: 375px;
@@ -103,6 +103,7 @@ export default {
   padding-left: 16px;
   font-size: 16px;
   outline: 0;
+  border-radius: 4px;
 }
 .contacts__input, .recipient__input, .adress__input {
   display: flex;
@@ -127,6 +128,9 @@ export default {
   font-size: 16px;
   color: #545155;
 }
+.order__right {
+  width: 334px;
+}
 .order__total {
   display: flex;
   flex-direction: column;
@@ -134,7 +138,8 @@ export default {
   padding: 30px;
   border-radius: 10px;
   gap: 16px;
-  margin-top: 64px
+  margin-top: 64px;
+  width: 274px;
 }
 .total__head {
   color:#545155;
